@@ -12,6 +12,8 @@ import java.io.IOException;
 import java.lang.reflect.Array;
 import java.util.List;
 
+import static utilities.Data.pathToReport;
+
 public class ResultPage extends BaseClass {
     public ResultPage(WebDriver driver) {
         super(driver);
@@ -23,7 +25,7 @@ public class ResultPage extends BaseClass {
         name2 = driver.findElements(By.cssSelector("#catalog_goods_block .g-i-tile.g-i-tile-catalog")).toArray(new WebElement[0]);
         FileWriter writer = null;
         try {
-            writer = new FileWriter("\\Rozetka\\target\\Note.txt", false);
+            writer = new FileWriter(pathToReport+"Note.txt", false);
         } catch (IOException e) {
             e.printStackTrace();
         }
