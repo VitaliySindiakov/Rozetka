@@ -33,13 +33,13 @@ public class HomePage extends BaseClass {
     @Step("перейти в раздел 'Телефоны, ТВ и электроника'")
     public void selectTelefonyTvEhlektronikaLink() {
         waitVisibility(telefonyTvEhlektronikaLink, 5);
-        mouseHover(telefonyTvEhlektronikaLink, logger);
+        mouseHover(telefonyTvEhlektronikaLink, logger,"Телефоны, ТВ и электроника");
     }
 
     @Step("перейти в раздел 'Телефоны'")
     public void selectTelefonyLink() {
         waitVisibility(telefonyLink, 5);
-        mouseHover(telefonyLink, logger);
+        mouseHover(telefonyLink, logger,"Телефоны");
     }
     @Step("перейти в раздел 'Смартфоны'")
     public void clickSmartPhones(){
