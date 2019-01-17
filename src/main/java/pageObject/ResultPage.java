@@ -23,7 +23,7 @@ public class ResultPage extends BaseClass {
         name2 = driver.findElements(By.cssSelector("#catalog_goods_block .g-i-tile.g-i-tile-catalog")).toArray(new WebElement[0]);
         FileWriter writer = null;
         try {
-            writer = new FileWriter("C:\\Rozetka\\target\\Note.txt", false);
+            writer = new FileWriter("\\Rozetka\\target\\Note.txt", false);
         } catch (IOException e) {
             e.printStackTrace();
         }

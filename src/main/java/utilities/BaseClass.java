@@ -345,6 +345,7 @@ public abstract class BaseClass {
     }
     @Step("Try to move mouse")
     public void mouseHover(WebElement element, Report logger) {
+        System.out.println("Try: mouseHover");
         driverWait();
         Actions actions = new Actions(driver);
         actions.moveToElement(element).build().perform();
