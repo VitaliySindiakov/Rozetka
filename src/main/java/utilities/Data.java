@@ -12,6 +12,6 @@ public class Data {
     public  static String home = "https://rozetka.com.ua";
 
 
-//    public static final String pathToReport = "C:\\Program Files (x86)\\Jenkins\\workspace\\GoDateNow\\target\\";
-    public static final  String pathToReport = "C:\\Rozetka\\target\\";
+    public static final String pathToReport = "C:\\Program Files (x86)\\Jenkins\\workspace\\Rozetka\\target\\";
+//    public static final  String pathToReport = "C:\\Rozetka\\target\\";
 }
