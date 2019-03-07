@@ -13,10 +13,10 @@ import org.testng.annotations.Test;
 @Feature("Rozetka")
 public class TestSuite extends BaseTestClassWebdriver {
 
-    @Test(priority = 1, description = "Сценарий 1")
-    @Description("Сценарий 1")
+    @Test(priority = 1, description = "User Search for Phone")
+    @Description("User Search for Phone")
     public void test01() {
-        logger.start(TestSuite.class, "Сценарий 1");
+        logger.start(TestSuite.class, "User Search for Phone");
         homePage.userSearchAndGetResult();
     }
 

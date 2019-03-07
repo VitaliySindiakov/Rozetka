@@ -424,8 +424,6 @@ public abstract class BaseClass {
                 fail("Title doesn't match to text");
             } else {
                 try {
-                    driver.manage().timeouts().pageLoadTimeout(time2, TimeUnit.SECONDS);
-                    driver.manage().timeouts().setScriptTimeout(time2, TimeUnit.SECONDS);
                     if (driver.getTitle().contains(text)) {
                         logger.getLogger().log(LogStatus.PASS, "ACTUAL RESULT:  Title matches to text");
                         System.out.println("Title matches to text");
@@ -547,26 +545,6 @@ public abstract class BaseClass {
         Actions builder = new Actions(driver);
         builder.moveToElement(element).build().perform();
     }
-
-    public static void choosePhotoForUpload(String filePath) throws AWTException {
-        StringSelection stringSelection = new StringSelection(filePath);
-        Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection, null);
-        Robot robot = new Robot();
-        robot.delay(1000);
-        robot.keyPress(KeyEvent.VK_CONTROL);
-        robot.delay(300);
-        robot.keyPress(KeyEvent.VK_V);
-        robot.delay(300);
-        robot.keyRelease(KeyEvent.VK_V);
-        robot.delay(300);
-        robot.keyRelease(KeyEvent.VK_CONTROL);
-        robot.delay(300);
-        robot.keyPress(KeyEvent.VK_ENTER);
-        robot.delay(300);
-        robot.keyRelease(KeyEvent.VK_ENTER);
-        robot.delay(300);
-    }
-
 
     public static String captureScreenshot(WebDriver driver, String screenshotName) {
         DateFormat dateFormat = new SimpleDateFormat("yyyyMMdd");
